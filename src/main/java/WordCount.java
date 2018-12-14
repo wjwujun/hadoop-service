@@ -1,5 +1,7 @@
 import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
 
 import java.io.IOException;
 import java.net.URI;
@@ -57,7 +59,7 @@ public class WordCount {
         }*/
 
         /*查询目下的信息*/
-  /*      FileStatus[] status = fs.listStatus(new Path("/"));
+        FileStatus[] status = fs.listStatus(new Path("/"));
         for (FileStatus fileStatus : status) {
             System.out.println("路径"+fileStatus.getPath());
             System.out.println("这个文件是文件夹吗？"+fileStatus.isDirectory());
@@ -65,7 +67,7 @@ public class WordCount {
             System.out.println("块大小"+fileStatus.getBlockSize());
             System.out.println("块长度"+fileStatus.getLen());
             System.out.println("------------------------------------------------------");
-        }*/
+        }
 
 
 
