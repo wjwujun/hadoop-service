@@ -68,11 +68,6 @@ public class WordCount {
             System.out.println("块长度"+fileStatus.getLen());
             System.out.println("------------------------------------------------------");
         }
-
-
-
-
-
         fs.close();
 
     }
