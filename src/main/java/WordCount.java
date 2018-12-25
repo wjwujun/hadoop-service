@@ -1,8 +1,9 @@
 import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.FileStatus;
+import org.apache.hadoop.fs.FSDataOutputStream;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URI;
 
@@ -46,6 +47,7 @@ public class WordCount {
         /*删除一个hdfs中的文件(递归删除)*/
         //fs.delete(new Path("/MobileFile/"),true);
 
+
         /*查询指定目录下的信息*/
       /*  RemoteIterator<LocatedFileStatus> iteraor = fs.listFiles(new Path("/"), true);
         while (iteraor.hasNext()){
@@ -58,8 +60,10 @@ public class WordCount {
             System.out.println("------------------------------------------------------");
         }*/
 
+
+
         /*查询目下的信息*/
-        FileStatus[] status = fs.listStatus(new Path("/"));
+   /*     FileStatus[] status = fs.listStatus(new Path("/"));
         for (FileStatus fileStatus : status) {
             System.out.println("路径"+fileStatus.getPath());
             System.out.println("这个文件是文件夹吗？"+fileStatus.isDirectory());
@@ -67,7 +71,46 @@ public class WordCount {
             System.out.println("块大小"+fileStatus.getBlockSize());
             System.out.println("块长度"+fileStatus.getLen());
             System.out.println("------------------------------------------------------");
+        }*/
+
+
+
+        /*读取hdfs中的文件的内容*/
+       /* FSDataInputStream in = fs.open(new Path("/a.txt"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(in,"utf8"));  //包装成带缓冲的字符流,指定编码
+        String line=null;
+        while((line=br.readLine())!=null){
+            System.out.println(line);
+
         }
+        br.close();
+        in.close();*/
+
+
+       /*读取指定字节数*/
+     /* FSDataInputStream in = fs.open(new Path("/a.txt"));
+        in.seek(6);  //指定读取起始位置
+        byte[] buf = new byte[16];  //读取字节数
+        in.read(buf);
+        System.out.println(new String(buf));
+        in.close();*/
+
+
+
+        /*往hdfs中的文件的写内容*/
+        FSDataOutputStream out = fs.create(new Path("/c.txt"), false);//追加
+        byte[] buf = new byte[1024];
+
+        FileInputStream in = new FileInputStream("E:/javaproject/a.txt");
+        int read =0;
+
+        while ((read=in.read(buf))!=-1){
+            out.write(buf,0,read);      //最后一次可能没有1024
+        }
+        in.close();
+        out.close();
+
+
         fs.close();
 
     }
