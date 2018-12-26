@@ -103,7 +103,6 @@ public class WordCount {
 
         FileInputStream in = new FileInputStream("E:/javaproject/a.txt");
         int read =0;
-
         while ((read=in.read(buf))!=-1){
             out.write(buf,0,read);      //最后一次可能没有1024
         }
