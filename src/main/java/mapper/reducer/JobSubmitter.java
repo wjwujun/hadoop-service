@@ -43,7 +43,7 @@ public class JobSubmitter {
         Job job = Job.getInstance(conf);
 
         //1、封装参数：jar包所在位置。
-        job.setJar("E:/javaproject/hadoop-service/target/hadoop-service-1.0-SNAPSHOT.jar");  //写死的方式
+        job.setJar("E:/javaproject/wc.jar");  //写死的方式
         //job.setJarByClass(JobSubmitter.class);  //根据类加载的位置，判断jar在哪个位置。
 
 
