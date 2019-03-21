@@ -10,7 +10,7 @@ import java.net.URI;
 public class WordCount {
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        String str="hdfs://122.225.58.117:9000/";
+        String str="hdfs://192.168.72.130:9000/";
 
         /*
         *Configuration参数配置的机制：

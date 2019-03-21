@@ -10,7 +10,7 @@ import java.io.IOException;
 public class WordcountMapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
     @Override
-    protected void map(LongWritable key, Text value, Context context)
+    protected void map(LongWritable  key, Text value, Context context)
             throws IOException, InterruptedException {
 
         // 切单词
@@ -18,7 +18,6 @@ public class WordcountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
         String[] words = line.split(" ");
         for(String word:words){
             context.write(new Text(word), new IntWritable(1));
-
         }
     }
 }
