@@ -14,14 +14,39 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 public class pageTopReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 
+    //声明map,存储topn的数据,自动排序
+    TreeMap<PageCount,Object> treeMap=new TreeMap<>();
+
+
     @Override
     protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
         int count=0;
         for (IntWritable value : values) {
             count+=value.get();
         }
-        context.write(key,new IntWritable(count));
+        PageCount pageCount = new PageCount(key.toString(),count);
+
+        treeMap.put(pageCount,null);
+        //reduce执行完了以后，不写入文件,交给cleanup做排序处理
+        //context.write(key,new IntWritable(count));
     }
 
 
+    /*
+    * cleanup在reduce执行完以后，执行
+    * */
+    @Override
+    protected void cleanup(Context context) throws IOException, InterruptedException {
+
+        int top=5;   //声明要取数据的前几名，一般存储在配置文件里面
+        Set<Entry<PageCount, Object>> entries = treeMap.entrySet();
+
+        int i=0;
+        for (Entry<PageCount, Object> entry : entries) {
+            context.write(new Text(entry.getKey().getPage()),new IntWritable(entry.getKey().getCount()));
+            i++;
+            if(top==i) return;
+        }
+
+    }
 }
