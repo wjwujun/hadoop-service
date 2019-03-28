@@ -38,7 +38,10 @@ public class pageTopReducer extends Reducer<Text, IntWritable, Text, IntWritable
     @Override
     protected void cleanup(Context context) throws IOException, InterruptedException {
 
-        int top=5;   //声明要取数据的前几名，一般存储在配置文件里面
+        //从配置文件中取出，要获取的参数，一般要指定一个默认值。
+        Configuration conf = context.getConfiguration();
+        int top = (int) conf.getInt("top.n",5);
+
         Set<Entry<PageCount, Object>> entries = treeMap.entrySet();
 
         int i=0;
