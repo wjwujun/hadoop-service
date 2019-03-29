@@ -60,7 +60,7 @@ public class pageCountStep1 {
         job.setOutputValueClass(IntWritable.class);
 
 
-        FileInputFormat.setInputPaths(job,new Path("E:/data/input"));
+        FileInputFormat.setInputPaths(job,new Path("E:/data/input/request"));
         FileOutputFormat.setOutputPath(job,new Path("E:/data/out/top"));
 
         job.waitForCompletion(true);
