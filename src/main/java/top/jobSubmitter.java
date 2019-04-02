@@ -24,7 +24,6 @@ public class jobSubmitter {
         * */
         Configuration conf = new Configuration();
         conf.set("fs.defaultFS", "hdfs://host-01:9000");
-        //conf.set("mapreduce.framework.name", "yarn");  //提交到yarn上面运行
         conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
 
         Job job = Job.getInstance(conf);
