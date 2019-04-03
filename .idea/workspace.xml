@@ -7,13 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6570dbc9-743b-4ee2-b91c-0d92b6d02e8e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/PageCount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/jobSubmitter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/pageTopMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/pageTopReducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/top/request.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/appData/DataClean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/appData/JsonToStringUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/appData/appdataTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/hadoop_service_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/hadoop_service_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/flow/FlowBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/flow/FlowBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,6 +24,11 @@
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/hadoop_service$DataClean.ic" NAME="DataClean Coverage Results" MODIFIED="1554277336861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>appData.*</FILTER>
+    </SUITE>
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -41,14 +46,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/top/jobSubmitter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="258">
+              <caret line="46" selection-start-line="46" selection-end-line="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/appData/DataClean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="55" column="66" selection-start-line="55" selection-start-column="66" selection-end-line="55" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="docComment;method#setup#0;class#CleanMapper#0;class#DataClean#0" />
+                <element signature="docComment;method#cleanup#0;class#CleanMapper#0;class#DataClean#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.7.3/hadoop-mapreduce-client-core-2.7.3.jar!/org/apache/hadoop/mapred/TextOutputFormat.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/appData/JsonToStringUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -62,6 +102,15 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>OrderBean</find>
+      <find>null ==</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>StringUtils.isBlank(</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -88,17 +137,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/hsfs/HdfsWordcount.java" />
         <option value="$PROJECT_DIR$/src/main/java/mapper/reducer/WordcountMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/mapper/reducer/WordcountReducer.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/mapper/reducer/JobSubmitter.java" />
         <option value="$PROJECT_DIR$/src/main/java/flow/JobSubMitter.java" />
         <option value="$PROJECT_DIR$/src/main/java/flow/ProvincePartitioner.java" />
         <option value="$PROJECT_DIR$/src/main/java/flow/FlowCountReducer.java" />
         <option value="$PROJECT_DIR$/src/main/java/flow/FlowCountMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/flow/FlowBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/top/PageCount.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/pageTopMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/PageCount.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/pageTopReducer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/sort/PageCount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/sort/pageCountStep2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/index/indexStepOne.java" />
+        <option value="$PROJECT_DIR$/src/main/java/index/indexStepTwo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/top/sort/pageCountStep1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/order/OrderBean.java" />
+        <option value="$PROJECT_DIR$/src/main/java/order/OrderTopn.java" />
+        <option value="$PROJECT_DIR$/src/main/java/order/OrderIdGroupingComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/wc/WordcountReducer.java" />
         <option value="$PROJECT_DIR$/src/main/java/top/jobSubmitter.java" />
+        <option value="$PROJECT_DIR$/src/test/java/appData/appdataTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/appData/JsonToStringUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/appData/DataClean.java" />
       </list>
     </option>
   </component>
@@ -148,7 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,7 +241,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="appData" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hadoop-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hadoop-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="top" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hadoop-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hadoop-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hadoop-service" type="b2602c69:ProjectViewProjectNode" />
@@ -191,14 +266,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553678200648" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554281461128" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../utils" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -208,18 +283,21 @@
     <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\javaProject\hadoop-service\src\main\java\top" />
-      <recent name="E:\javaProject\hadoop-service\src\main\java\flow" />
-      <recent name="E:\javaproject\hadoop-service\src\main\resources" />
-      <recent name="E:\javaproject\hadoop-service\src\main\java" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.collect.cn" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="index" />
+      <recent name="top.sort" />
       <recent name="top" />
       <recent name="flow" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.collect.cn" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\javaProject\hadoop-service\src\main\java\wc" />
+      <recent name="E:\javaProject\hadoop-service\src\main\java\order" />
+      <recent name="E:\javaProject\hadoop-service\src\main\java\index\data" />
+      <recent name="E:\javaProject\hadoop-service\src\main\java\top" />
+      <recent name="E:\javaProject\hadoop-service\src\main\java\flow" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -234,20 +312,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.jobSubmitter">
+  <component name="RunManager" selected="Application.DataClean">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HdfsWordcount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.hsfs.HdfsWordcount" />
+    <configuration name="DataClean" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="appData.DataClean" />
       <module name="hadoop-service" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PROGRAM_PARAMETERS" value="E:\data\input\app\20170101  E:\data\input\app\20170101out" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.hsfs.*" />
+          <option name="PATTERN" value="appData.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -255,38 +333,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JobSubMitter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="flow.JobSubMitter" />
+    <configuration name="OrderTopn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="order.OrderTopn" />
       <module name="hadoop-service" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="flow.*" />
+          <option name="PATTERN" value="order.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JobSubmitter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="mapper.reducer.JobSubmitter" />
-      <module name="hadoop-service" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="mapper.reducer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WordCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WordCount" />
-      <module name="hadoop-service" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -318,6 +374,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="appdataTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hadoop-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="appData.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="appData" />
+      <option name="MAIN_CLASS_NAME" value="appData.appdataTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="appdataTest.stringJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hadoop-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="appData.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="appData" />
+      <option name="MAIN_CLASS_NAME" value="appData.appdataTest" />
+      <option name="METHOD_NAME" value="stringJson" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -328,19 +417,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.WordCount" />
-      <item itemvalue="Application.HdfsWordcount" />
-      <item itemvalue="Application.JobSubmitter" />
-      <item itemvalue="Application.JobSubMitter" />
+      <item itemvalue="Application.OrderTopn" />
       <item itemvalue="Application.jobSubmitter" />
+      <item itemvalue="Application.DataClean" />
+      <item itemvalue="JUnit.appdataTest.stringJson" />
+      <item itemvalue="JUnit.appdataTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DataClean" />
+        <item itemvalue="JUnit.appdataTest.stringJson" />
+        <item itemvalue="JUnit.appdataTest" />
         <item itemvalue="Application.jobSubmitter" />
-        <item itemvalue="Application.JobSubMitter" />
-        <item itemvalue="Application.JobSubmitter" />
-        <item itemvalue="Application.HdfsWordcount" />
-        <item itemvalue="Application.WordCount" />
+        <item itemvalue="Application.OrderTopn" />
       </list>
     </recent_temporary>
   </component>
@@ -368,33 +457,63 @@
       <workItem from="1553505351615" duration="1084000" />
       <workItem from="1553581891682" duration="4218000" />
       <workItem from="1553587174315" duration="1001000" />
-      <workItem from="1553673035548" duration="5069000" />
+      <workItem from="1553673035548" duration="7782000" />
+      <workItem from="1553736240991" duration="4427000" />
+      <workItem from="1553743093060" duration="1683000" />
+      <workItem from="1553751934964" duration="8944000" />
+      <workItem from="1553822647027" duration="6882000" />
+      <workItem from="1553830085898" duration="2833000" />
+      <workItem from="1553840906045" duration="4874000" />
+      <workItem from="1553846106462" duration="50000" />
+      <workItem from="1553846181641" duration="4346000" />
+      <workItem from="1554169997074" duration="8868000" />
+      <workItem from="1554195343539" duration="20000" />
+      <workItem from="1554196561060" duration="633000" />
+      <workItem from="1554275892893" duration="5051000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="appdataTest - 2019.04.03 at 16h 00m 59s.xml">
+      <configuration name="appdataTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="appdataTest_stringJson - 2019.04.03 at 16h 05m 34s.xml">
+      <configuration name="appdataTest.stringJson" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="appdataTest - 2019.04.03 at 16h 06m 07s.xml">
+      <configuration name="appdataTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="appdataTest_stringJson - 2019.04.03 at 16h 06m 40s.xml">
+      <configuration name="appdataTest.stringJson" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="appdataTest_stringJson - 2019.04.03 at 16h 08m 02s.xml">
+      <configuration name="appdataTest.stringJson" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86545000" />
+    <option name="totallyTimeSpent" value="137869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23200513" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49803922" visible="true" weight="0.26092544" />
+      <window_info id="Structure" order="1" sideWeight="0.5019608" side_tool="true" weight="0.23521851" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="JRebel" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.6495957" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.68733156" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" weight="0.83827496" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4407008" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.5444744" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.23235801" />
       <window_info anchor="bottom" id="Java Enterprise" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
@@ -404,6 +523,7 @@
       <window_info anchor="bottom" id="Problems" order="14" />
       <window_info anchor="bottom" id="JRebel Executor" order="15" weight="0.5336927" />
       <window_info anchor="bottom" id="JRebel Console" order="16" side_tool="true" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32969153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -420,48 +540,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/loggerWrite.java" />
-    <entry file="jar://D:/java/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="1246" column="18" selection-start-line="1246" selection-start-column="18" selection-end-line="1246" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/collect/cn/BackCleanTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/collect/cn/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/collect/cn/PropertyHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/collect.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/collect/cn/CollectTask.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -563,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="63" column="19" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.7.3/hadoop-mapreduce-client-core-2.7.3.jar!/org/apache/hadoop/mapreduce/lib/output/FileOutputFormat.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -663,43 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/pageTopReducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/pageTopMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/PageCount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding>
-            <element signature="e#256#257#0" expanded="true" />
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/flow/JobSubMitter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
@@ -710,15 +744,205 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/sort/PageCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/index/indexStepOne.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="43" selection-end-line="33" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/index/indexStepTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/index/data/a.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/sort/pageCountStep1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1193">
+          <caret line="62" column="66" lean-forward="true" selection-start-line="62" selection-start-column="66" selection-end-line="62" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/sort/pageCountStep2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="78" column="33" lean-forward="true" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/order/OrderIdGroupingComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="35" lean-forward="true" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wc/WordcountMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wc/WordcountReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/PageCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/pageTopReducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/pageTopMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="66" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/top/request.dat">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/top/jobSubmitter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/order/OrderBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="104">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wc/JobSubmitterLinuxToYarn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="33" column="40" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wc/JobSubmitterWindowsToYarn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/wc/JobSubmitterWindowsLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/order/OrderTopn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1578">
+          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/com/alibaba/fastjson/1.2.28/fastjson-1.2.28.jar!/com/alibaba/fastjson/JSON.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="135" column="29" selection-start-line="135" selection-start-column="29" selection-end-line="135" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/appData/appdataTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#aa#0;class#appdataTest#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="58" column="20" lean-forward="true" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appData/JsonToStringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/top/jobSubmitter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="46" selection-start-line="46" selection-end-line="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/apache/hadoop/hadoop-mapreduce-client-core/2.7.3/hadoop-mapreduce-client-core-2.7.3.jar!/org/apache/hadoop/mapred/TextOutputFormat.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/appData/DataClean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="55" column="66" selection-start-line="55" selection-start-column="66" selection-end-line="55" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;method#setup#0;class#CleanMapper#0;class#DataClean#0" />
+            <element signature="docComment;method#cleanup#0;class#CleanMapper#0;class#DataClean#0" />
           </folding>
         </state>
       </provider>
@@ -790,7 +1014,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: com.fasterxml.jackson.core:jackson-annotations:2.7.0</last-edited>
+          <last-edited>Maven: aopalliance:aopalliance:1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
