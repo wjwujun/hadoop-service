@@ -51,9 +51,11 @@ public class DataClean {
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
             /*数据源为json*/
+            if(StringUtils.isBlank(value.toString())) return;
             JSONObject jsonObj = JSON.parseObject(value.toString());
             /*获取头部信息*/
             JSONObject headerObj = jsonObj.getJSONObject("header");
+            if (StringUtils.isBlank(headerObj.toJSONString()))return;
 
             //过滤缺失必选字段的记录
             if (StringUtils.isBlank(headerObj.getString("sdk_ver"))) return;
@@ -137,6 +139,8 @@ public class DataClean {
 
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(NullWritable.class);
+
+        //不做reduce处理
         job.setNumReduceTasks(0);
 
         // 避免生成默认的part-m-00000等文件，因为，数据已经交给MultipleOutputs输出了
