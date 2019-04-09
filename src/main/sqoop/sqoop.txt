@@ -1,0 +1,90 @@
+/**  将mysql的表导入 hdfs **/
+bin/sqoop import \
+--connect jdbc:mysql://47.98.136.216:3306/app \
+--username root \
+--password wj@110120 \
+--target-dir \
+/sqooptest \
+--fields-terminated-by ',' \
+--table emp \
+--split-by id \
+--m 2
+
+/**  将mysql的表的增量数据导入 hdfs **/
+bin/sqoop import \
+--connect jdbc:mysql://47.98.136.216:3306/app \
+--target-dir /sqooptest  \
+--username root \
+--password wj@110120 \
+--table emp \
+--m 1 \
+--incremental append \
+--check-column id \
+--last-value 1205
+
+
+/**  将mysql的表导入 hive **/
+bin/sqoop import \
+--connect jdbc:mysql://47.98.136.216:3306/app \
+--username root \
+--password wj@110120 \
+--hive-import \
+--fields-terminated-by ',' \
+--table emp \
+--split-by id \
+--target-dir /user/hive/warehouse/test.db/emp \
+--m 2
+
+
+/********************************************************************/
+
+/**  将hive的表数据（hdfs的文件）导出到mysql **/
+bin/sqoop export \
+--connect jdbc:mysql://47.98.136.216:3306/app \
+--username root \
+--password wj@110120 \
+--input-fields-terminated-by ',' \
+--table t_from_hive \       #要导出到哪个mysql表
+--export-dir /sqooptest     #导出hdfs路径
+
+
+/*将hive日活用户数据导入到mysql*/
+CREATE TABLE dim_user_active_day (
+    os_name varchar(20)
+    ,city  varchar(20)
+    ,release_channel  varchar(20)
+    ,app_ver_name  varchar(20)
+    ,cnts INT(10)
+	,day  varchar(20)
+    );
+
+bin/sqoop export --connect "jdbc:mysql://47.98.136.216:3306/app?useUnicode=true&characterEncoding=utf-8" --username root --password wj@110120 --table dim_user_active_day --export-dir /user/hive/warehouse/test.db/dim_user_active_day/day=2019-04-03/dim=0000 --input-fields-terminated-by \\001
+
+
+
+/***********shell脚本实现********************/
+
+将app数据仓库中的 日新用户维度统计报表：dim_user_new_day  导出到mysql的表中去
+-- 1 在mysql中建库建表
+create table dim_user_new_day(
+os_name varchar(20),city varchar(20),release_channel varchar(20),app_ver_name varchar(20),cnts int,dt varchar(20)
+);
+
+--  用sqoop将hive中的 dim_user_new_day 中的指定日分区的数据导出到mysql 的dim_user_new_day
+
+#!/bin/bash
+day=`date -d '-1 day' +'%Y-%m-%d'`
+
+/root/apps/sqoop/bin/sqoop export \
+--connect "jdbc:mysql://47.98.136.216:3306/app?useUnicode=true&characterEncoding=utf-8" \
+--username root \
+--password wj@110120 \
+--input-fields-terminated-by '\001' \
+--table dim_user_new_day \
+--export-dir /user/hive/warehouse/app.db/dim_user_new_day_1p/day=${day} /
+
+
+
+
+
+
